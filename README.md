@@ -30,11 +30,11 @@ Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForDebug
 ```
 android{
 packagingOptions {
-exclude 'META-INF/DEPENDENCIES.txt'
-exclude 'META-INF/NOTICE'
-exclude 'META-INF/NOTICE.txt'
-exclude 'META-INF/LICENSE'
-exclude 'META-INF/LICENSE.txt'
+    exclude 'META-INF/DEPENDENCIES.txt'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/NOTICE.txt'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/LICENSE.txt'
           }
 }
 ```
@@ -60,9 +60,9 @@ Lock file: /Users/Mr.xiao/.gradle/caches/2.10/scripts/build_3cyr7hzjurcc62ge3ix
 compileSdkVersion 23
 buildToolsVersion "23.0.3"
 defaultConfig {
-applicationId "net.mmloo2014.android"
-minSdkVersion 14
-targetSdkVersion 23
+     applicationId "net.mmloo2014.android"
+     minSdkVersion 14
+     targetSdkVersion 23
 }
 ```
 
@@ -88,9 +88,9 @@ Process 'command '/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Hom
 
 ```
 android { 
-defaultConfig { 
-multiDexEnabled true
-      }
+   defaultConfig { 
+       multiDexEnabled true
+    }
 }
 ```
 #### （7）Android studio 编译问题：finished with non-zero exit value 1（由于导入的依赖出现重复造成的）
@@ -159,8 +159,8 @@ buildToolsVersion版本太高，我原来的 buildToolsVersion "24.0.0” 需要
 
 ```
 android {    
-compileSdkVersion 23    
-buildToolsVersion "23.0.3"  
+      compileSdkVersion 23    
+      buildToolsVersion "23.0.3"  
 }
 ```
 
@@ -174,34 +174,34 @@ buildToolsVersion "23.0.3"
 
 ```
 buildscript {
-repositories {   
-jcenter()
+    repositories {   
+       jcenter()
 }
     
 dependencies {   
-classpath 'com.android.tools.build:gradle:2.1.2'
+       classpath 'com.android.tools.build:gradle:2.1.2'
    }
 }
 
 allprojects {  
-repositories {    
-jcenter()
+     repositories {    
+       jcenter()
    }
 }
 buildscript {
-repositories {      
-jcenter()
+    repositories {      
+       jcenter()
 }
     
 dependencies {
-classpath 'com.android.tools.build:gradle:2.1.2'
+       classpath 'com.android.tools.build:gradle:2.1.2'
     }
 }
 
 
 allprojects {
-repositories {
-jcenter()
+      repositories {
+         jcenter()
     }
 }
 ```
@@ -209,17 +209,17 @@ jcenter()
 
 ```
 apply plugin: 'com.android.application'android { 
-compileSdkVersion 23
- buildToolsVersion '23.0.3' 
-defaultConfig { 
-minSdkVersion 9 
-targetSdkVersion 23 
-versionCode 1 
-versionName '1.0' 
-             }
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3' 
+   defaultConfig { 
+     minSdkVersion 9 
+     targetSdkVersion 23 
+     versionCode 1 
+     versionName '1.0' 
+    }
 }
 dependencies { 
-compile 'com.android.support:appcompat-v7:23.2.1'
+     compile 'com.android.support:appcompat-v7:23.2.1'
 }
 ```
 
@@ -247,8 +247,8 @@ Error:(51, 52) 错误: -source 1.6 中不支持 diamond 运算符
 ```
 android {
  compileOptions {
- sourceCompatibility JavaVersion.VERSION_1_7
- targetCompatibility JavaVersion.VERSION_1_7
+     sourceCompatibility JavaVersion.VERSION_1_7
+     targetCompatibility JavaVersion.VERSION_1_7
  }
 }
 ```
@@ -434,71 +434,70 @@ classpath 'com.android.tools.build:gradle:1.3.0'
 **异常信息如下所示：**
 ```
 com.test.android/com.test.android.ui.activity.RandomActivity}: android.view.InflateException: Binary XML file line #22: Error inflating class android.support.design.widget.CollapsingToolbarLayout
-                                                                      at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2325)
-                                                                      at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2387)
-                                                                      at android.app.ActivityThread.access$800(ActivityThread.java:151)
-                                                                      at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1303)
-                                                                      at android.os.Handler.dispatchMessage(Handler.java:102)
-                                                                      at android.os.Looper.loop(Looper.java:135)
-                                                                      at android.app.ActivityThread.main(ActivityThread.java:5254)
-                                                                      at java.lang.reflect.Method.invoke(Native Method)
-                                                                      at java.lang.reflect.Method.invoke(Method.java:372)
-                                                                      at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
-                                                                      at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
-                                                                   Caused by: android.view.InflateException: Binary XML file line #22: Error inflating class android.support.design.widget.CollapsingToolbarLayout
-                                                                      at android.view.LayoutInflater.createView(LayoutInflater.java:633)
-                                                                      at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:743)
-                                                                      at android.view.LayoutInflater.rInflate(LayoutInflater.java:806)
-                                                                      at android.view.LayoutInflater.rInflate(LayoutInflater.java:809)
-                                                                      at android.view.LayoutInflater.rInflate(LayoutInflater.java:809)
-                                                                      at android.view.LayoutInflater.inflate(LayoutInflater.java:504)
-                                                                      at android.view.LayoutInflater.inflate(LayoutInflater.java:414)
-                                                                      at android.view.LayoutInflater.inflate(LayoutInflater.java:365)
-                                                                      at android.support.v7.app.AppCompatDelegateImplV7.setContentView(AppCompatDelegateImplV7.java:276)
-                                                                      at android.support.v7.app.AppCompatActivity.setContentView(AppCompatActivity.java:136)
-                                                                      at com.test.android.ui.activity.RefreshableActivity.onCreate(RefreshableActivity.java:31)
-                                                                      at android.app.Activity.performCreate(Activity.java:5990)
-                                                                      at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1106)
-                                                                      at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2278)
-                                                                      at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2387) 
-                                                                      at android.app.ActivityThread.access$800(ActivityThread.java:151) 
-                                                                      at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1303) 
-                                                                      at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                      at android.os.Looper.loop(Looper.java:135) 
-                                                                      at android.app.ActivityThread.main(ActivityThread.java:5254) 
-                                                                      at java.lang.reflect.Method.invoke(Native Method) 
-                                                                      at java.lang.reflect.Method.invoke(Method.java:372) 
-                                                                      at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903) 
-                                                                      at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698) 
-                                                             
-                                                                   Caused by: java.lang.NoSuchMethodError: No static method setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V in class Landroid/support/v4/graphics/drawable/DrawableCompat; or its super classes (declaration of 'android.support.v4.graphics.drawable.DrawableCompat' appears in /data/app/com.test.android-1/base.apk)
-                                                                      at android.support.design.widget.CollapsingToolbarLayout.setStatusBarScrim(CollapsingToolbarLayout.java:663)
-                                                                      at android.support.design.widget.CollapsingToolbarLayout.<init>(CollapsingToolbarLayout.java:197)
-                                                                      at android.support.design.widget.CollapsingToolbarLayout.<init>(CollapsingToolbarLayout.java:132)
-                                                                      at java.lang.reflect.Constructor.newInstance(Native Method) 
-                                                                      at java.lang.reflect.Constructor.newInstance(Constructor.java:288) 
-                                                                      at android.view.LayoutInflater.createView(LayoutInflater.java:607) 
-                                                                      at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:743) 
-                                                                      at android.view.LayoutInflater.rInflate(LayoutInflater.java:806) 
-                                                                      at android.view.LayoutInflater.rInflate(LayoutInflater.java:809) 
-                                                                      at android.view.LayoutInflater.rInflate(LayoutInflater.java:809) 
-                                                                      at android.view.LayoutInflater.inflate(LayoutInflater.java:504) 
-                                                                      at android.view.LayoutInflater.inflate(LayoutInflater.java:414) 
-                                                                      at android.view.LayoutInflater.inflate(LayoutInflater.java:365) 
-                                                                      at android.support.v7.app.AppCompatDelegateImplV7.setContentView(AppCompatDelegateImplV7.java:276) 
-                                                                      at android.support.v7.app.AppCompatActivity.setContentView(AppCompatActivity.java:136) 
-                                                                      at com.test.android.ui.activity.RefreshableActivity.onCreate(RefreshableActivity.java:31) 
-                                                                      at android.app.Activity.performCreate(Activity.java:5990) 
-                                                                      at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1106) 
-                                                                      at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2278) 
-                                                                      at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2387) 
-                                                                      at android.app.ActivityThread.access$800(ActivityThread.java:151) 
-                                                                      at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1303) 
-                                                                      at android.os.Handler.dispatchMessage(Handler.java:102) 
-                                                                      at android.os.Looper.loop(Looper.java:135) 
-                                                                      at android.app.ActivityThread.main(ActivityThread.java:5254) 
-                                                                      at java.lang.reflect.Method.invoke(Native Method) 
-                                                                      at java.lang.reflect.Method.invoke(Method.java:372)
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2325)
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2387)
+at android.app.ActivityThread.access$800(ActivityThread.java:151)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1303)
+at android.os.Handler.dispatchMessage(Handler.java:102)
+at android.os.Looper.loop(Looper.java:135)
+at android.app.ActivityThread.main(ActivityThread.java:5254)
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+Caused by: android.view.InflateException: Binary XML file line #22: Error inflating class android.support.design.widget.CollapsingToolbarLayout
+at android.view.LayoutInflater.createView(LayoutInflater.java:633)
+at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:743)
+at android.view.LayoutInflater.rInflate(LayoutInflater.java:806)
+at android.view.LayoutInflater.rInflate(LayoutInflater.java:809)
+at android.view.LayoutInflater.rInflate(LayoutInflater.java:809)
+at android.view.LayoutInflater.inflate(LayoutInflater.java:504)
+at android.view.LayoutInflater.inflate(LayoutInflater.java:414)
+at android.view.LayoutInflater.inflate(LayoutInflater.java:365)
+at android.support.v7.app.AppCompatDelegateImplV7.setContentView(AppCompatDelegateImplV7.java:276)
+at android.support.v7.app.AppCompatActivity.setContentView(AppCompatActivity.java:136)
+at com.test.android.ui.activity.RefreshableActivity.onCreate(RefreshableActivity.java:31)
+at android.app.Activity.performCreate(Activity.java:5990)
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1106)
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2278)
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2387) 
+at android.app.ActivityThread.access$800(ActivityThread.java:151) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1303) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:135) 
+at android.app.ActivityThread.main(ActivityThread.java:5254) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at java.lang.reflect.Method.invoke(Method.java:372) 
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903) 
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)                                                              
+Caused by: java.lang.NoSuchMethodError: No static method setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V in class Landroid/support/v4/graphics/drawable/DrawableCompat; or its super classes (declaration of 'android.support.v4.graphics.drawable.DrawableCompat' appears in /data/app/com.test.android-1/base.apk)
+at android.support.design.widget.CollapsingToolbarLayout.setStatusBarScrim(CollapsingToolbarLayout.java:663)
+at android.support.design.widget.CollapsingToolbarLayout.<init>(CollapsingToolbarLayout.java:197)
+at android.support.design.widget.CollapsingToolbarLayout.<init>(CollapsingToolbarLayout.java:132)
+at java.lang.reflect.Constructor.newInstance(Native Method) 
+at java.lang.reflect.Constructor.newInstance(Constructor.java:288) 
+at android.view.LayoutInflater.createView(LayoutInflater.java:607) 
+at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:743) 
+at android.view.LayoutInflater.rInflate(LayoutInflater.java:806) 
+at android.view.LayoutInflater.rInflate(LayoutInflater.java:809) 
+at android.view.LayoutInflater.rInflate(LayoutInflater.java:809) 
+at android.view.LayoutInflater.inflate(LayoutInflater.java:504) 
+at android.view.LayoutInflater.inflate(LayoutInflater.java:414) 
+at android.view.LayoutInflater.inflate(LayoutInflater.java:365) 
+at android.support.v7.app.AppCompatDelegateImplV7.setContentView(AppCompatDelegateImplV7.java:276) 
+at android.support.v7.app.AppCompatActivity.setContentView(AppCompatActivity.java:136) 
+at com.test.android.ui.activity.RefreshableActivity.onCreate(RefreshableActivity.java:31) 
+at android.app.Activity.performCreate(Activity.java:5990) 
+at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1106) 
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2278) 
+at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2387) 
+at android.app.ActivityThread.access$800(ActivityThread.java:151) 
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1303) 
+at android.os.Handler.dispatchMessage(Handler.java:102) 
+at android.os.Looper.loop(Looper.java:135) 
+at android.app.ActivityThread.main(ActivityThread.java:5254) 
+at java.lang.reflect.Method.invoke(Native Method) 
+at java.lang.reflect.Method.invoke(Method.java:372)
 ```
 **解决方案**
 在项目的build.gradle文件中添加下面一行，同步一下即可
