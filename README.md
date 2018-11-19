@@ -11,7 +11,7 @@ aaptOptions.useNewCruncher = false
 ```
 用来关闭Android Studio的PNG合法性检查的，直接不让它检查。
 
-####（2）Android Studio 错误: 非法字符: '\ufeff' 解决方案|错误: 需要class, interface或enum
+#### （2）Android Studio 错误: 非法字符: '\ufeff' 解决方案|错误: 需要class, interface或enum
 
 - **原因：**
 Eclipse可以智能的把UTF-8+BOM文件[转为](http://www.cfanz.cn/index.php?c=search&key=%E8%BD%AC%E4%B8%BA)普通的UTF-8文件，Android Studio还没有这个功能，所以使用Android Studio编译UTF-8+BOM[编码](http://www.cfanz.cn/index.php?c=search&key=%E7%BC%96%E7%A0%81)的文件[时会](http://www.cfanz.cn/index.php?c=search&key=%E6%97%B6%E4%BC%9A)出现” [非法](http://www.cfanz.cn/index.php?c=search&key=%E9%9D%9E%E6%B3%95)字符: '\ufeff' “[之类](http://www.cfanz.cn/index.php?c=search&key=%E4%B9%8B%E7%B1%BB)的错误
