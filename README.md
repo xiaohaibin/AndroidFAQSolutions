@@ -1,15 +1,16 @@
 本文属于个人平时项目开发过程遇到的一些问题，记录下来并总结解决方案，希望能帮到大家解决问题，有些问题的解决方案是在StackoverFlow上找到的，建议大家遇到问题多去上面找，基本上都能找到解决方案的。
 
 （1）**将Eclipse项目导入到Android studio 中 很多点9图出现问题解决方法：**
-在build.gradle里添加以下两句：
 
+在build.gradle里添加以下两句：
 ```
 aaptOptions.cruncherEnabled = false     
 aaptOptions.useNewCruncher = false
 ```
 用来关闭Android Studio的PNG合法性检查的，直接不让它检查。
 
-（2）**Android Studio 错误: 非法字符: '\ufeff' 解决方案|错误: 需要class, interface或enum**
+（2）**Android Studio 错误: 非法字符: '\ufeff' 解决方案|错误: 需要class, interface或enum **
+
 - **原因：**
 Eclipse可以智能的把UTF-8+BOM文件[转为](http://www.cfanz.cn/index.php?c=search&key=%E8%BD%AC%E4%B8%BA)普通的UTF-8文件，Android Studio还没有这个功能，所以使用Android Studio编译UTF-8+BOM[编码](http://www.cfanz.cn/index.php?c=search&key=%E7%BC%96%E7%A0%81)的文件[时会](http://www.cfanz.cn/index.php?c=search&key=%E6%97%B6%E4%BC%9A)出现” [非法](http://www.cfanz.cn/index.php?c=search&key=%E9%9D%9E%E6%B3%95)字符: '\ufeff' “[之类](http://www.cfanz.cn/index.php?c=search&key=%E4%B9%8B%E7%B1%BB)的错误
 
@@ -18,6 +19,7 @@ Eclipse可以智能的把UTF-8+BOM文件[转为](http://www.cfanz.cn/index.php?c
 **用EdItPlus打开.java文件[依次](http://www.cfanz.cn/index.php?c=search&key=%E4%BE%9D%E6%AC%A1)：文档》文本编辑》转换文本编码》选择UTF-8编码即可
 
 （3）**将项目导入到AS中出现以下问题：**
+
 ```
 Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForDebug'. > com.android.bui
 ```
@@ -707,7 +709,6 @@ Glide.with(context)..load(url).placeholder(R.drawable.icon_stub_dynamic).dontAni
 
 ![欢迎关注“大话安卓”公众号](http://upload-images.jianshu.io/upload_images/1956769-2f49dcb0dc5195b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##欢迎加入“大话安卓”技术交流群，一起分享，共同进步##
 ![欢迎加入“大话安卓”技术交流群，互相学习提升](http://upload-images.jianshu.io/upload_images/1956769-326c166b86ed8e94.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
