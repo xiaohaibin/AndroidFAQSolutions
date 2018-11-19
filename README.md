@@ -1,3 +1,5 @@
+## AndroidFAQSolution
+
 #### 本文属于个人平时项目开发过程遇到的一些问题，记录下来并总结解决方案，希望能帮到大家解决问题，有些问题的解决方案是在StackoverFlow上找到的，建议大家遇到问题多去上面找，基本上都能找到解决方案的。各位童鞋也可以把自己平常遇到的一些疑难杂症提Pr上来，我会合并上去。
 
 （1）**将Eclipse项目导入到Android studio 中 很多点9图出现问题解决方法：**
@@ -705,7 +707,7 @@ Glide.with(context)..load(url).placeholder(R.drawable.icon_stub_dynamic).dontAni
 3.去掉activity中的orientation属性
  ```
 
-##如果觉得文章帮到你，喜欢我的文章可以关注个人微信公众号，将会定期推送优质技术文章，求关注~~~##
+## 如果觉得文章帮到你，喜欢我的文章可以关注个人微信公众号，将会定期推送优质技术文章，求关注~~~
 
 ![欢迎关注“大话安卓”公众号](http://upload-images.jianshu.io/upload_images/1956769-2f49dcb0dc5195b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
