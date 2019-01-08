@@ -709,6 +709,21 @@ Glide.with(context)..load(url).placeholder(R.drawable.icon_stub_dynamic).dontAni
 2.再加入<item name="android:windowDisablePreview">true</item>
 3.去掉activity中的orientation属性
  ```
+ ** （31）Android API>=28 http 图片无法加载
+**原因 ：** 这是由于http协议安全问题，在api上访问http协议被认为时不安全
+
+** 解决办法：**
+> 1. 在res目录下创建xml文件夹，在xml下创建network_security_config.xml文件
+ ```
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
+ ```
+>2. 在AndroidManifest文件中配置
+ ```
+android:networkSecurityConfig=”@xml/network_security_config” 
+ ```
 
 #### 如果觉得文章帮到你，喜欢我的文章可以关注个人微信公众号，将会定期推送优质技术文章，求关注~~~
 
